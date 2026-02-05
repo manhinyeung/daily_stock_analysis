@@ -100,7 +100,7 @@ class BaseFetcher(ABC):
         stock_code: str, 
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
-        days: int = 30
+        days: int = 60
     ) -> pd.DataFrame:
         """
         获取日线数据（统一入口）
@@ -315,7 +315,7 @@ class DataFetcherManager:
         stock_code: str,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
-        days: int = 30
+        days: int = 60
     ) -> Tuple[pd.DataFrame, str]:
         """
         获取日线数据（自动切换数据源）
